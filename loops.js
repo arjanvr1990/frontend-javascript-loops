@@ -7,6 +7,12 @@
 // ****
 // *****
 
+for (let i = 1; i <= 5; i++) {
+    console.log("*".repeat(i));
+}
+
+
+
 // Tip: je kunt de .repeat() methode gebruiken om een karakter een n aantal keer te herhalen...
 // Dit heb je nog niet geleerd, maar bekijk hiervoor dit MDN-artikel eens: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
 // ==========================================
@@ -24,8 +30,13 @@
 // loop...
 // klaar!
 // ==========================================
+console.log("opdracht 2")
 
+const loop = ["loop...", "loop...", "loop...", "loop...", "klaar!"]
 
+for (let i = 0; i < 5; i++) {
+    console.log(loop[i])
+}
 
 
 
@@ -44,10 +55,21 @@
 // >> 8
 // >> 9
 // ==========================================
+console.log("opdracht 3")
 
+const greaterThan = ">"
 
-
-
+for (let i = 0; i < 10; i++) {
+    if (i <= 2) {
+        console.log(i);
+    }
+    if ((i >= 3) && (i <= 5)) {
+        console.log(greaterThan + " " + i);
+    }
+    if ((i >= 6) && (i <= 9)) {
+        console.log(greaterThan.repeat(2) + " " + i);
+    }
+}
 
 // ==========================================
 // Opdracht 4 (BONUS): schrijf een for-loop die van 0 tot 100 loopt en de getallen print.
