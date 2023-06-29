@@ -108,6 +108,34 @@ for (let i = 0; i < 10; i++) {
 // FizzBuzz
 // etc.
 // ==========================================
+console.log("opdracht 4")
 
 
 
+
+for (let i = 1; i <= 100; i++) {
+    console.log(i)
+    if (i % 3 === 0) {
+        console.log(i + " Fizz");
+    }  if (i % 5 === 0) {
+        console.log(i + " Buzz");
+    }  if ((i % 3 === 0) && (i % 5 === 0))
+        console.log(i + " Fizzbuzz")
+}
+
+//ik kwam tot dit resultaat hierna begreep ik niet meer hoe ik de dubbel getallen eruit moest halen, chat GPT geraadpleegd, ik krijg graag feedback of mijn denkwijze juist is het beter anders kon aanpakken:///
+
+
+console.log("chatGPT uitkomst:")
+
+for (let i = 0; i <= 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+        console.log("Fizz");
+    } else if (i % 5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(i);
+    }
+}
