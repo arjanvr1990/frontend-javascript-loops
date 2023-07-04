@@ -12,21 +12,26 @@ const scores = [
 for (let i = 0; i < scores.length; i++) {
 
     const scoreLog = (scores[i].score);
+    const grades = scores[i].grade
 
     if (scoreLog > 90) {
-        console.log("A");
+        scores[i].grade = grades !== null ? grades : "A";
 
     } else if (scoreLog > 80) {
-            console.log("B");
+        scores[i].grade = grades !== null ? grades :"B";
 
     } else if (scoreLog > 70) {
-        console.log("C");
+        scores[i].grade = grades !== null ? grades : "C";
 
     } else if (scoreLog > 60) {
-        console.log("D");
+        scores[i].grade = grades !== null ? grades : "D";
 
-    } else    console.log("F");
+    } else    scores[i].grade = grades !== null ? grades :"F";
 }
+
+console.log(scores)
+
+console.log("ik snap alleen niet waarom de eerste scores[i].grade niet mag aanpassen naar de const grades, dan krijg ik een foutmelding???, hier krijg ik graag feedback op, hier heb ik een tijdje mee gestoeid en begrijpen doe ik het niet")
 
 
 
