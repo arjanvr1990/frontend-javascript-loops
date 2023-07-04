@@ -78,6 +78,9 @@ for (let i = 0; i < squares.length; i++) {
     console.log(cubicMeterSum);
 }
 
+
+// Ik vond deze opdracht verwarrend in zijn uitleg, het betreft ook een kubus (m3) geen vierkant (m2)//////
+
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
 // console.log(squares) geeft: [30, 2, 8, 24, 11];

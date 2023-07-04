@@ -6,14 +6,35 @@ const scores = [
     {name: 'Max', score: 83, grade: null},
     {name: 'David', score: 77, grade: null},
     {name: 'Khalid', score: 92, grade: null},
-    {name: 'Rianne', score: 66, grade: null}
+    {name: 'Rianne', score: 66, grade: null},
 ];
+
+for (let i = 0; i < scores.length; i++) {
+
+    const scoreLog = (scores[i].score);
+
+    if (scoreLog > 90) {
+        console.log("A");
+
+    } else if (scoreLog > 80) {
+            console.log("B");
+
+    } else if (scoreLog > 70) {
+        console.log("C");
+
+    } else if (scoreLog > 60) {
+        console.log("D");
+
+    } else    console.log("F");
+}
+
+
 
 // Verwachtte uitkomsten:
 // 83
 // 77
 // 92
-// 66ç
+// 66
 // ==========================================
 
 
@@ -23,7 +44,7 @@ const scores = [
 // ==========================================
 // Opdracht 1b
 // Breid je script uit door voor iedere student de score om te rekenen naar een letter en dit in de terminal te printen
-// < 60 = F, < 70 = D, <80 = C, <90 B, <100 = A
+// < 60 = F, < 70 = D, <80 = C, <90 = B, <100 = A
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
 // Verwachtte uitkomsten:
 // B
@@ -31,6 +52,7 @@ const scores = [
 // A
 // D
 // ==========================================
+
 
 
 
