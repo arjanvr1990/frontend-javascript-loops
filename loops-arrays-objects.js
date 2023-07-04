@@ -140,6 +140,8 @@ console.log(NOVIEmployees);
 //  3581 = Oudwijk
 //  3583 = Schildersbuurt
 
+console.log("Opdracht 3:")
+
 const students = [
     {name: 'Mariska', city: 'Utrecht', zipCode: '3513', neighborhood: null},
     {name: 'Mehmet', city: 'Utrecht', zipCode: '3514', neighborhood: null},
@@ -154,6 +156,41 @@ const students = [
     {name: 'Aicha', city: 'Utrecht', zipCode: '3514', neighborhood: null},
     {name: 'Karima', city: 'Utrecht', zipCode: '3531', neighborhood: null},
 ];
+
+for (let i = 0; i < students.length; i++) {
+
+
+    let neighborhoodName = students[i].neighborhood;
+
+    switch (students[i].zipCode) {
+        case "3513":
+            students[i].neighborhood = neighborhoodName !== null ? neighborhoodName : "Pijlsweerd";
+            break;
+        case "3514":
+            students[i].neighborhood = neighborhoodName !== null ? neighborhoodName : "Vogelenbuurt";
+            break;
+        case "3512":
+            students[i].neighborhood = neighborhoodName !== null ? neighborhoodName : "Binnenstad";
+            break;
+        case "3531":
+            students[i].neighborhood = neighborhoodName !== null ? neighborhoodName : "Lombok";
+            break;
+        case "3572":
+            students[i].neighborhood = neighborhoodName !== null ? neighborhoodName : "Wittevrouwen";
+            break;
+        case "3581":
+            students[i].neighborhood = neighborhoodName !== null ? neighborhoodName : "Oudwijk";
+            break;
+        case "3583":
+            students[i].neighborhood = neighborhoodName !== null ? neighborhoodName : "Schildersbuurt";
+            break;
+        default:
+            console.error('Verkeerde invoer');
+    }
+    console.log(students[i]);
+}
+
+
 
 // Verwachte uitkomsten:
 // [
