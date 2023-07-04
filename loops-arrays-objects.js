@@ -84,12 +84,26 @@ console.log("ik snap alleen niet waarom de eerste scores[i].grade niet mag aanpa
 // Opdracht 2
 // Schrijf een script die e-mailadressen genereert voor al onze medewerkers. Sla dit op in een nieuwe property "email" die je toevoegt aan iedere medewerker.
 
+console.log("opdracht 2");
+
+
 const NOVIEmployees = [
-    {firstName: 'Nova', lastName: 'Eeken'},
-    {firstName: 'Sam', lastName: 'Barnhoorn'},
-    {firstName: 'Tessa', lastName: 'Steur'},
-    {firstName: 'Mark', lastName: 'Rensen'},
+    {firstName: 'Nova', lastName: 'Eeken', email: null},
+    {firstName: 'Sam', lastName: 'Barnhoorn', email: null},
+    {firstName: 'Tessa', lastName: 'Steur', email: null},
+    {firstName: 'Mark', lastName: 'Rensen', email: null},
 ];
+
+
+for (let i = 0; i < NOVIEmployees.length; i++) {
+
+    const emails = NOVIEmployees[i].firstName + "." + NOVIEmployees[i].lastName + "@novi.nl";
+    const emailChange = NOVIEmployees[i].email;
+    const lowercaseTekstEmails = emails.toLowerCase();
+    NOVIEmployees[i].email = emailChange !== null ? emailChange : lowercaseTekstEmails;
+}
+
+console.log(NOVIEmployees);
 
 // Bij NOVI horen de e-mailadressen altijd in het volgende format: voornaam.achternaam@novi.nl
 // Vóór het script zie je de originele objecten,
