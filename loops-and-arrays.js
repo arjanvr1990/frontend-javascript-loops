@@ -3,7 +3,7 @@
 // Schrijf een script dat iedere naam in onderstaande array vervangt door een koosnaampje, door er -"je" achter te plakken.
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 namen zou bevatten!
 // ==========================================
-console.log("opdracht 1:")
+console.log("opdracht 1:");
 
 const names = ["Henk", "Piet", "Fred", "Joop", "Arjan", "Roos", "Gerrit"];
 for (let i = 0; i < names.length; i++) {
@@ -32,6 +32,8 @@ for (let i = 0; i < names.length; i++) {
 // Schrijf een script dat ieder EVEN getal in onderstaande array met 2 vermenigvuldigd, en ieder ONEVEN getal met 3
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
 // ==========================================
+
+console.log("opdracht 2:");
 
 const numbers = [2, 4, 5, 29, 38];
 
@@ -65,7 +67,16 @@ for (let i = 0; i < numbers.length; i++) {
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
 // ==========================================
 
+console.log("opdracht 3:");
+
 const squares = [30, 2, 8, 24, 11];
+
+for (let i = 0; i < squares.length; i++) {
+    const cubicMeter = (squares[i] * squares[i] * squares[i]);
+
+    const cubicMeterSum = ("het volume van " + squares[i] + " is " + cubicMeter + " m3");
+    console.log(cubicMeterSum);
+}
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
