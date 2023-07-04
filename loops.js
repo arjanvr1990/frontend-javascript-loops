@@ -96,7 +96,10 @@ for (let i = 0; i < 10; i++) {
 // Fizz
 // 19
 // Buzz
-// Fizz
+// Fizzif (i % 3 === 0) {
+//         console.log(i + " Fizz");
+//     }  if (i % 5 === 0) {
+//         console.log(i + " Buzz");
 // 22
 // 23
 // Fizz
@@ -115,10 +118,7 @@ console.log("opdracht 4")
 
 for (let i = 1; i <= 100; i++) {
     console.log(i)
-    if (i % 3 === 0) {
-        console.log(i + " Fizz");
-    }  if (i % 5 === 0) {
-        console.log(i + " Buzz");
+
     }  if ((i % 3 === 0) && (i % 5 === 0))
         console.log(i + " Fizzbuzz")
 }
