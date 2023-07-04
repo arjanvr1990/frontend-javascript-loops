@@ -3,9 +3,20 @@
 // Schrijf een script dat iedere naam in onderstaande array vervangt door een koosnaampje, door er -"je" achter te plakken.
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 namen zou bevatten!
 // ==========================================
+console.log("opdracht 1:");
 
-const names = ["Henk", "Piet", "Fred", "Joop"];
+const names = ["Henk", "Piet", "Fred", "Joop", "Arjan", "Roos", "Gerrit"];
+for (let i = 0; i < names.length; i++) {
 
+     const diminutive = ("je");
+
+    const nickName = (names[i] + diminutive);
+
+    console.log(nickName);
+}
+
+
+// console.log(nickName)
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
 // console.log(names) geeft: ["Henk", "Piet", "Fred", "Joop"]
@@ -22,7 +33,21 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
 // ==========================================
 
+console.log("opdracht 2:");
+
 const numbers = [2, 4, 5, 29, 38];
+
+for (let i = 0; i < numbers.length; i++) {
+    const numberSeries = numbers[i]
+
+    // console.log(numberSeries);
+    if (numberSeries % 2 === 0) {
+        console.log(numberSeries * 2);
+
+    }  else {
+        console.log(numberSeries * 3);
+        }
+}
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
@@ -42,7 +67,19 @@ const numbers = [2, 4, 5, 29, 38];
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
 // ==========================================
 
+console.log("opdracht 3:");
+
 const squares = [30, 2, 8, 24, 11];
+
+for (let i = 0; i < squares.length; i++) {
+    const cubicMeter = (squares[i] * squares[i] * squares[i]);
+
+    const cubicMeterSum = ("het volume van " + squares[i] + " is " + cubicMeter + " m3");
+    console.log(cubicMeterSum);
+}
+
+
+// Ik vond deze opdracht verwarrend in zijn uitleg, het betreft ook een kubus (m3) geen vierkant (m2)//////
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:

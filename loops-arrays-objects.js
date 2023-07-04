@@ -6,14 +6,40 @@ const scores = [
     {name: 'Max', score: 83, grade: null},
     {name: 'David', score: 77, grade: null},
     {name: 'Khalid', score: 92, grade: null},
-    {name: 'Rianne', score: 66, grade: null}
+    {name: 'Rianne', score: 66, grade: null},
 ];
+
+for (let i = 0; i < scores.length; i++) {
+
+    const scoreLog = (scores[i].score);
+    const grades = scores[i].grade
+
+    if (scoreLog > 90) {
+        scores[i].grade = grades !== null ? grades : "A";
+
+    } else if (scoreLog > 80) {
+        scores[i].grade = grades !== null ? grades :"B";
+
+    } else if (scoreLog > 70) {
+        scores[i].grade = grades !== null ? grades : "C";
+
+    } else if (scoreLog > 60) {
+        scores[i].grade = grades !== null ? grades : "D";
+
+    } else    scores[i].grade = grades !== null ? grades :"F";
+}
+
+console.log(scores)
+
+console.log("ik snap alleen niet waarom de eerste scores[i].grade niet mag aanpassen naar de const grades, dan krijg ik een foutmelding???, hier krijg ik graag feedback op, hier heb ik een tijdje mee gestoeid en begrijpen doe ik het niet")
+
+
 
 // Verwachtte uitkomsten:
 // 83
 // 77
 // 92
-// 66ç
+// 66
 // ==========================================
 
 
@@ -23,7 +49,7 @@ const scores = [
 // ==========================================
 // Opdracht 1b
 // Breid je script uit door voor iedere student de score om te rekenen naar een letter en dit in de terminal te printen
-// < 60 = F, < 70 = D, <80 = C, <90 B, <100 = A
+// < 60 = F, < 70 = D, <80 = C, <90 = B, <100 = A
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
 // Verwachtte uitkomsten:
 // B
@@ -31,6 +57,7 @@ const scores = [
 // A
 // D
 // ==========================================
+
 
 
 
@@ -57,12 +84,26 @@ const scores = [
 // Opdracht 2
 // Schrijf een script die e-mailadressen genereert voor al onze medewerkers. Sla dit op in een nieuwe property "email" die je toevoegt aan iedere medewerker.
 
+console.log("opdracht 2");
+
+
 const NOVIEmployees = [
-    {firstName: 'Nova', lastName: 'Eeken'},
-    {firstName: 'Sam', lastName: 'Barnhoorn'},
-    {firstName: 'Tessa', lastName: 'Steur'},
-    {firstName: 'Mark', lastName: 'Rensen'},
+    {firstName: 'Nova', lastName: 'Eeken', email: null},
+    {firstName: 'Sam', lastName: 'Barnhoorn', email: null},
+    {firstName: 'Tessa', lastName: 'Steur', email: null},
+    {firstName: 'Mark', lastName: 'Rensen', email: null},
 ];
+
+
+for (let i = 0; i < NOVIEmployees.length; i++) {
+
+    const emails = NOVIEmployees[i].firstName + "." + NOVIEmployees[i].lastName + "@novi.nl";
+    const emailChange = NOVIEmployees[i].email;
+    const lowercaseTekstEmails = emails.toLowerCase();
+    NOVIEmployees[i].email = emailChange !== null ? emailChange : lowercaseTekstEmails;
+}
+
+console.log(NOVIEmployees);
 
 // Bij NOVI horen de e-mailadressen altijd in het volgende format: voornaam.achternaam@novi.nl
 // Vóór het script zie je de originele objecten,
@@ -99,6 +140,8 @@ const NOVIEmployees = [
 //  3581 = Oudwijk
 //  3583 = Schildersbuurt
 
+console.log("Opdracht 3:")
+
 const students = [
     {name: 'Mariska', city: 'Utrecht', zipCode: '3513', neighborhood: null},
     {name: 'Mehmet', city: 'Utrecht', zipCode: '3514', neighborhood: null},
@@ -113,6 +156,41 @@ const students = [
     {name: 'Aicha', city: 'Utrecht', zipCode: '3514', neighborhood: null},
     {name: 'Karima', city: 'Utrecht', zipCode: '3531', neighborhood: null},
 ];
+
+for (let i = 0; i < students.length; i++) {
+
+
+    let neighborhoodName = students[i].neighborhood;
+
+    switch (students[i].zipCode) {
+        case "3513":
+            students[i].neighborhood = neighborhoodName !== null ? neighborhoodName : "Pijlsweerd";
+            break;
+        case "3514":
+            students[i].neighborhood = neighborhoodName !== null ? neighborhoodName : "Vogelenbuurt";
+            break;
+        case "3512":
+            students[i].neighborhood = neighborhoodName !== null ? neighborhoodName : "Binnenstad";
+            break;
+        case "3531":
+            students[i].neighborhood = neighborhoodName !== null ? neighborhoodName : "Lombok";
+            break;
+        case "3572":
+            students[i].neighborhood = neighborhoodName !== null ? neighborhoodName : "Wittevrouwen";
+            break;
+        case "3581":
+            students[i].neighborhood = neighborhoodName !== null ? neighborhoodName : "Oudwijk";
+            break;
+        case "3583":
+            students[i].neighborhood = neighborhoodName !== null ? neighborhoodName : "Schildersbuurt";
+            break;
+        default:
+            console.error('Verkeerde invoer');
+    }
+    console.log(students[i]);
+}
+
+
 
 // Verwachte uitkomsten:
 // [
